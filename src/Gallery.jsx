@@ -46,12 +46,7 @@ const galleryData = [
     label: 'Fitness Center',
     category: 'amenities'
   },
-  // {
-  //   src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20ARIAL%20DAY.jpg.jpeg',
-  //   alt: 'Aerial View',
-  //   label: 'Aerial View',
-  //   category: 'aerial'
-  // },
+
   {
     src: gardenImg,
     alt: 'Garden View',
