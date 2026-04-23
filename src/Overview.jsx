@@ -1,3 +1,5 @@
+import overviewImage from './assets/VRANDAVN WIDE ANGLE NIGHT  VIEW 02.jpg.jpeg';
+
 function Overview({ openPopup }) {
   return (
     <section className="overview-section" id="overview">
@@ -43,7 +45,7 @@ function Overview({ openPopup }) {
         <div className="image-column">
           <div className="building-card">
             <img
-              src="https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRANDAVN%20WIDE%20ANGLE%20NIGHT%20%20VIEW%2002.jpg.jpeg?w=8100&h=5100"
+              src={overviewImage}
               alt="Luxury Building Architecture"
             />
           </div>

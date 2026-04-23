@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import floorplanImg from './assets/price.webp';
 
 const priceData = [
   { type: '1 BHK', area: '665-735 Sqft', price: '₹ 36.39-39.83 Lakhs*' },
@@ -8,8 +9,6 @@ const priceData = [
   { type: 'Office', area: '3100-1320 Sqft', price: '₹ 71.26-72.28 Lakhs*' },
   { type: 'Studio', area: '1050-1010 Sqft', price: '₹ 81.73-81.99 Lakhs*' }
 ];
-
-const floorplanImg = 'https://69dbb75eb9fe4e9da070d86a.imgix.net/price.webp';
 
 function PriceSection({ openPopup }) {
   const gridRef = useRef(null);

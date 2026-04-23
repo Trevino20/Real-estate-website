@@ -1,3 +1,5 @@
+import tourPreviewImg from './assets/VRANDAVN WIDE ANGLE NIGHT  VIEW 02.jpg.jpeg';
+
 function VirtualTour({ openPopup }) {
   const handlePlayClick = (e) => {
     e.preventDefault();
@@ -15,7 +17,7 @@ function VirtualTour({ openPopup }) {
 
         <div className="video-container" id="playVideo">
           <img
-            src="https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRANDAVN%20WIDE%20ANGLE%20NIGHT%20%20VIEW%2002.jpg.jpeg"
+            src={tourPreviewImg}
             alt="Walkthrough Preview"
           />
           <div className="play-overlay">

@@ -8,18 +8,18 @@ function MobileStickyBar({ openPopup }) {
     <div className="mobile-sticky-bar">
       <div className="sticky-container">
         <a
-          href="tel:+910000000000"
+          href="tel:+917776887293"
           className="sticky-btn btn-call"
-          onClick={handleClick}
+          // onClick={handleClick}
         >
           <i className="fa-solid fa-phone"></i> Call
         </a>
         <a
-          href="https://wa.me/910000000000"
+          href="https://wa.me/917776887293"
           className="sticky-btn btn-whatsapp"
           target="_blank"
           rel="noreferrer"
-          onClick={handleClick}
+          // onClick={handleClick}
         >
           <i className="fa-brands fa-whatsapp"></i> WhatsApp
         </a>

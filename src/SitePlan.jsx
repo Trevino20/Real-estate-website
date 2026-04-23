@@ -1,33 +1,38 @@
 import { useState, useRef } from 'react';
+import awing2 from './assets/awing2.png';
+import bwing1 from './assets/bwing1.png';
+import bwing2 from './assets/bwing2.png';
+import cwing1 from './assets/cwing1.png';
+import cwing2 from './assets/cwing2.png';
 
 const floorPlans = [
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/A-wing.png',
+    src: awing2,
     alt: 'A Wing Floor Plan',
     title: 'Wing A \u00a0(1st to 7th, 9th & 10th Floor Plan)'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/awing2.png',
+    src: awing2,
     alt: '8th Floor Plan A Wing',
     title: 'Wing A \u00a0(8th Floor Plan)'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/bwing1.png',
+    src: bwing1,
     alt: 'B Wing Floor Plan',
     title: 'Wing B \u00a0(1st to 7th, 9th & 10th Floor Plan)'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/bwing2.png',
+    src: bwing2,
     alt: 'B Wing Floor Plan - 8th Floor',
     title: 'Wing B \u00a0(8th Floor Plan)'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/cwing1.png',
+    src: cwing1,
     alt: 'C Wing Floor Plan',
     title: 'Wing C \u00a0(1st to 7th, 9th to 12th Floor Plan)'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/cwing2.png',
+    src: cwing2,
     alt: 'C Wing Floor Plan - 8th Floor',
     title: 'Wing C \u00a0(8th Floor Plan)'
   }

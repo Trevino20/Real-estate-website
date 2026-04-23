@@ -1,14 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
+  
+import heroSlideImage from './assets/VRINDAVAN ARIAL DAY.jpg.jpeg';
+import heroSlideImage1 from './assets/VRANDAVAN DAY DEC 3 SEND.jpg.jpeg';
+import heroSlideImage2 from './assets/VRANDAVAN DAY  VIEW  ALL WINGS.jpg.jpeg';
 
 const slides = [
   {
-    style: "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20ARIAL%20DAY.jpg.jpeg?h=5195&w=8250')"
+    style:  `url(${heroSlideImage1})`
   },
   {
-    style: "url('https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRANDAVAN%20DAY%20DEC%203%20SEND.jpg.jpeg?w=8100&h=5100')"
+    style: `url(${heroSlideImage})`
   },
   {
-    style: "url('https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRANDAVAN%20DAY%20%20VIEW%20%20ALL%20WINGS.jpg.jpeg?w=7425&h=5443')"
+    style: `url(${heroSlideImage2})`
   }
 ];
 
@@ -45,9 +49,34 @@ function Hero({ openPopup }) {
     return () => clearInterval(timerRef.current);
   }, []);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    openPopup('Get Luxury Walkthrough');
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", "f38e771e-e954-4234-9e28-5d0cc8f2b3b7");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      // KEEP your existing logic
+      openPopup('Get Luxury Walkthrough');
+
+      if (!data.success) {
+        console.log("Submission failed");
+      }
+
+      e.target.reset();
+      e.target.querySelector('#cbox').checked = true;
+
+    } catch (error) {
+      console.log("Error submitting form");
+      openPopup('Get Luxury Walkthrough'); // still open popup even if error
+    }
   };
 
   return (
@@ -92,14 +121,14 @@ function Hero({ openPopup }) {
           <p className="form-subtitle">Tailored For You</p>
 
           <form id="leadForm" onSubmit={handleFormSubmit}>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email (optional)" />
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email (optional)" />
             <div className="tel-group">
-              <select>
+              <select name="country_code">
                 <option>India (+91)</option>
                 <option>UAE (+971)</option>
               </select>
-              <input type="tel" placeholder="Mobile Number" required />
+              <input type="tel" name="phone" placeholder="Mobile Number" required />
             </div>
             <div className="consent-area">
               <input type="checkbox" id="cbox" required defaultChecked />

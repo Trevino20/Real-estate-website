@@ -1,33 +1,41 @@
 import { useState, useEffect } from 'react';
 
+import towerImg from './assets/ABHINAV AVASTHI  VIEW 01.jpg.jpeg';
+import bedroomImg from './assets/BEDROOM.avif';
+import mroom from './assets/MROOM.jpg';
+import poolImg from './assets/VRINDAVAN SWIMING POOL 1.jpg.jpeg';
+import mandirImg from './assets/VRINDAVAN MANDIR.jpg.jpeg';
+import gardenImg from './assets/VRINDAVAN GARDEN 01.jpg.jpeg';
+import image1 from './assets/VRANDAVAN DAY  VIEW A WING.jpg.jpeg';
+
 const galleryData = [
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRANDAVN%20WIDE%20ANGLE%20NIGHT%20%20VIEW%2002.jpg.jpeg',
+    src: towerImg,
     alt: 'Tower Elevation',
     label: 'Tower Elevation',
     category: 'exterior',
     featured: true
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800',
-    alt: 'Living Room',
-    label: 'Living Room',
+    src: bedroomImg,
+    alt: 'Bedroom',
+    label: 'Bedroom',
     category: 'interior'
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800',
+    src: mroom,
     alt: 'Master Bedroom',
     label: 'Master Bedroom',
     category: 'interior'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20SWIMING%20POOL%201.jpg.jpeg',
+    src: poolImg,
     alt: 'Swimming Pool',
     label: 'Swimming Pool',
     category: 'amenities'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20MANDIR.jpg.jpeg',
+    src: mandirImg,
     alt: 'Krishna Mandir',
     label: 'Krishna Mandir',
     category: 'exterior'
@@ -38,17 +46,23 @@ const galleryData = [
     label: 'Fitness Center',
     category: 'amenities'
   },
+  // {
+  //   src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20ARIAL%20DAY.jpg.jpeg',
+  //   alt: 'Aerial View',
+  //   label: 'Aerial View',
+  //   category: 'aerial'
+  // },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20ARIAL%20DAY.jpg.jpeg',
-    alt: 'Aerial View',
-    label: 'Aerial View',
-    category: 'aerial'
+    src: gardenImg,
+    alt: 'Garden View',
+    label: 'VRINDAVAN GARDEN',
+    category: 'amenities'
   },
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-    alt: 'Kitchen',
-    label: 'Modern Kitchen',
-    category: 'interior'
+    src: image1,
+    alt: 'Day View - A Wing',
+    label: 'Day View - A Wing',
+    category: 'aerial'
   }
 ];
 

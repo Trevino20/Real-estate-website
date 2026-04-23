@@ -1,18 +1,23 @@
 import { useRef } from 'react';
 
+import communityHallImg from './assets/ABHINAV AVASTHI  VIEW 01.jpg.jpeg';
+import swimmingPoolImg from './assets/VRINDAVAN SWIMING POOL 1.jpg.jpeg';
+import mandirImg from './assets/VRINDAVAN MANDIR.jpg.jpeg';
+import gardenImg from './assets/VRINDAVAN GARDEN 01.jpg.jpeg';
+
 const amenities = [
   {
-    src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800',
+    src: communityHallImg,
     alt: 'Multipurpose Hall',
     title: 'Community Hall'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20SWIMING%20POOL%201.jpg.jpeg',
+    src: swimmingPoolImg,
     alt: 'Infinity Pool',
     title: 'Swimming Pool'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20MANDIR.jpg.jpeg',
+    src: mandirImg,
     alt: 'Open Amphitheatre',
     title: 'Krishna Mandir'
   },
@@ -22,7 +27,7 @@ const amenities = [
     title: 'Fitness Center'
   },
   {
-    src: 'https://69dbb75eb9fe4e9da070d86a.imgix.net/VEDCODE/VRINDAVAN%20GARDEN%2001.jpg.jpeg',
+    src: gardenImg,
     alt: 'Kids Play Area',
     title: 'VRINDAVAN GARDEN'
   }
