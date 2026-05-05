@@ -47,6 +47,10 @@ function PopupModal({ isOpen, title, onClose }) {
           setTimeout(() => setShowToast(false), 3500);
           e.target.reset();
           e.target.querySelector('#popupConsent').checked = true;
+          // Open the brochure PDF after successful submission (only for Brochure popup)
+          if (title === 'Download Brochure') {
+            window.open('https://drive.google.com/file/d/1TVidyE3o3zkv6q60OZd448mkJA07aBrW/view?usp=sharing', '_blank');
+          }
         } else {
           alert('Submission failed. Try again.');
         }

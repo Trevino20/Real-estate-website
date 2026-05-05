@@ -36,7 +36,7 @@ function Navbar({ openPopup }) {
         <a href="#gallery" onClick={closeMobileMenu}>Gallery</a>
         <a href="#location" onClick={closeMobileMenu}>Location</a>
         <a href="#virtual-tour" onClick={closeMobileMenu}>Virtual Site Visit</a>
-        <a href="#footer" onClick={closeMobileMenu}>Brochure</a>
+        <a href="#footer" onClick={(e) => { e.preventDefault(); closeMobileMenu(); openPopup('Download Brochure'); }}>Brochure</a>
       </nav>
 
       <div className="nav-right">

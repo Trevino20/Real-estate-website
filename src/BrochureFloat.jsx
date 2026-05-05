@@ -9,7 +9,7 @@ function BrochureFloat({ openPopup }) {
   }, []);
 
   const handleBrochureClick = () => {
-    window.open('https://drive.google.com/file/d/1TVidyE3o3zkv6q60OZd448mkJA07aBrW/view?usp=sharing', '_blank');
+    openPopup('Download Brochure');
   };
 
   return (
