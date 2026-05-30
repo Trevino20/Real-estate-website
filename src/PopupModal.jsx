@@ -1,19 +1,31 @@
 import { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
+=======
+// ── Paste your Google Apps Script Web App URL below ──────────────────────────
+const SHEET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwhi6UnVLmzVY7hqXa1z2ExlMgIXOMdXV2aOv5Jw1ED8qdZz3vQCy_MjBAu0E0Zjewz/exec";
+// ─────────────────────────────────────────────────────────────────────────────
+
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 function PopupModal({ isOpen, title, onClose }) {
   const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
+<<<<<<< HEAD
       if (e.key === 'Escape' && isOpen) {
         onClose();
       }
+=======
+      if (e.key === 'Escape' && isOpen) onClose();
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
   const handleOverlayClick = (e) => {
+<<<<<<< HEAD
     if (e.target === e.currentTarget) {
       onClose();
     }
@@ -45,6 +57,48 @@ function PopupModal({ isOpen, title, onClose }) {
     } catch (error) {
       alert("Something went wrong!");
     }
+=======
+    if (e.target === e.currentTarget) onClose();
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Build FormData exactly like the working HTML example
+    const sheetData = new FormData();
+    sheetData.append('timestamp',    '');                                    // filled by script
+    sheetData.append('name',         e.target.querySelector('[name=name]').value);
+    sheetData.append('email',        e.target.querySelector('[name=email]').value);
+    sheetData.append('country_code', e.target.querySelector('[name=country_code]').value);
+    sheetData.append('phone',        e.target.querySelector('[name=phone]').value);
+    sheetData.append('source',       `Popup – ${title}`);
+
+    // Send to Google Sheet (same pattern as working HTML — plain FormData)
+    fetch(SHEET_SCRIPT_URL, { method: 'POST', body: sheetData })
+      .catch(() => {});
+
+    // Also send via web3forms
+    const web3Data = new FormData(e.target);
+    web3Data.append('access_key', 'f38e771e-e954-4234-9e28-5d0cc8f2b3b7');
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: web3Data })
+      .then(r => r.json())
+      .then(data => {
+        if (data.success) {
+          onClose();
+          setShowToast(true);
+          setTimeout(() => setShowToast(false), 3500);
+          e.target.reset();
+          e.target.querySelector('#popupConsent').checked = true;
+          // Open the brochure PDF after successful submission (only for Brochure popup)
+          if (title === 'Download Brochure') {
+            window.open('https://drive.google.com/file/d/1TVidyE3o3zkv6q60OZd448mkJA07aBrW/view?usp=sharing', '_blank');
+          }
+        } else {
+          alert('Submission failed. Try again.');
+        }
+      })
+      .catch(() => alert('Something went wrong!'));
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
   };
 
   return (
@@ -78,9 +132,13 @@ function PopupModal({ isOpen, title, onClose }) {
         onClick={handleOverlayClick}
       >
         <div className="popup-box">
+<<<<<<< HEAD
           <button className="popup-close" onClick={onClose}>
             &times;
           </button>
+=======
+          <button className="popup-close" onClick={onClose}>&times;</button>
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
           <div className="popup-header">
             <img
@@ -107,7 +165,11 @@ function PopupModal({ isOpen, title, onClose }) {
                 <option value="+44">UK (+44)</option>
                 <option value="+971">UAE (+971)</option>
               </select>
+<<<<<<< HEAD
               <input type="tel" name="phone" className="popup-input" placeholder="Mobile Number" required />
+=======
+              <input type="tel" name="phone" className="popup-input" placeholder="Mobile Number" required pattern="[0-9]{10}" maxLength={10} onKeyPress={(e) => { if (!/[0-9]/.test(e.key)) e.preventDefault(); }} />
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
             </div>
 
             <div className="popup-checkbox-group">
@@ -118,9 +180,13 @@ function PopupModal({ isOpen, title, onClose }) {
               </label>
             </div>
 
+<<<<<<< HEAD
             <button type="submit" className="popup-submit-btn">
               Get It Now
             </button>
+=======
+            <button type="submit" className="popup-submit-btn">Get It Now</button>
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           </form>
         </div>
       </div>

@@ -1,9 +1,18 @@
 import { useRef } from 'react';
+<<<<<<< HEAD
 
 import communityHallImg from './assets/ABHINAV AVASTHI  VIEW 01.jpg.jpeg';
 import swimmingPoolImg from './assets/VRINDAVAN SWIMING POOL 1.jpg.jpeg';
 import mandirImg from './assets/VRINDAVAN MANDIR.jpg.jpeg';
 import gardenImg from './assets/VRINDAVAN GARDEN 01.jpg.jpeg';
+=======
+import { useScrollReveal } from './useScrollReveal';
+
+import communityHallImg from './assets/ABHINAV-AVASTHI--VIEW-01.webp';
+import swimmingPoolImg from './assets/VRINDAVAN-SWIMING-POOL-1.webp';
+import mandirImg from './assets/VRINDAVAN-MANDIR.webp';
+import gardenImg from './assets/VRINDAVAN-GARDEN-01.webp';
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
 const amenities = [
   {
@@ -37,6 +46,10 @@ function Amenities() {
   const sliderTrackRef = useRef(null);
   const prevBtnRef = useRef(null);
   const nextBtnRef = useRef(null);
+<<<<<<< HEAD
+=======
+  const revealRef = useScrollReveal('.reveal', 0.1);
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
   const getScrollStep = () => {
     const firstCard = sliderTrackRef.current?.querySelector('.amenity-card');
@@ -67,8 +80,13 @@ function Amenities() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="amenities-section" id="amenities">
       <div className="amenities-heading">
+=======
+    <section className="amenities-section" id="amenities" ref={revealRef}>
+      <div className="amenities-heading reveal">
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
         <div className="line"></div>
         <h2>Amenities</h2>
         <div className="line"></div>
@@ -95,7 +113,18 @@ function Amenities() {
         >
           {amenities.map((amenity, index) => (
             <div key={index} className="amenity-card">
+<<<<<<< HEAD
               <img src={amenity.src} alt={amenity.alt} />
+=======
+              <img
+                src={amenity.src}
+                alt={amenity.alt}
+                loading="lazy"
+                decoding="async"
+                width="320"
+                height="240"
+              />
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
               <div className="amenity-overlay">
                 <h3>{amenity.title}</h3>
               </div>

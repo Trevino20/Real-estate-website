@@ -1,4 +1,8 @@
 import { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { useScrollReveal } from './useScrollReveal';
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
 const accordionData = [
   {
@@ -45,14 +49,23 @@ const accordionData = [
 
 function Location({ openPopup }) {
   const [activeIndex, setActiveIndex] = useState(0);
+<<<<<<< HEAD
+=======
+  const ref = useScrollReveal('.reveal, .reveal-left, .reveal-right', 0.1);
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
   const handleAccordionClick = (index) => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
   return (
+<<<<<<< HEAD
     <section className="location-section" id="location">
       <div className="loc-header">
+=======
+    <section className="location-section" id="location" ref={ref}>
+      <div className="loc-header reveal">
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
         <div className="line"></div>
         <h2>Location</h2>
         <div className="line"></div>
@@ -60,7 +73,11 @@ function Location({ openPopup }) {
 
       <div className="location-grid">
         {/* Map */}
+<<<<<<< HEAD
         <div className="map-wrapper">
+=======
+        <div className="map-wrapper reveal-left" style={{ transitionDelay: '0.1s' }}>
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6427.345652824899!2d73.22110612017684!3d19.161506882364446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ed3f834bbc37%3A0xc86391f7e1d0b4a2!2sTrident%20Vrindavan!5e0!3m2!1sen!2sin!4v1776071011526!5m2!1sen!2sin"
             width="600"
@@ -74,7 +91,11 @@ function Location({ openPopup }) {
         </div>
 
         {/* Accordion */}
+<<<<<<< HEAD
         <div className="accordion" id="locationAccordion">
+=======
+        <div className="accordion reveal-right" style={{ transitionDelay: '0.2s' }} id="locationAccordion">
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           {accordionData.map((section, index) => (
             <div
               key={index}
@@ -102,7 +123,11 @@ function Location({ openPopup }) {
         </div>
 
         {/* Button */}
+<<<<<<< HEAD
         <div className="btn-container">
+=======
+        <div className="btn-container reveal" style={{ transitionDelay: '0.3s' }}>
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           <button
             className="request-btn"
             onClick={(e) => { e.preventDefault(); openPopup('Request Location Details'); }}

@@ -1,17 +1,31 @@
 import { useEffect, useRef } from 'react';
 import floorplanImg from './assets/price.webp';
+<<<<<<< HEAD
+=======
+import { useScrollReveal } from './useScrollReveal';
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
 const priceData = [
   { type: '1 BHK', area: '665-735 Sqft', price: '₹ 36.39-39.83 Lakhs*' },
   { type: '1 BHK', area: '765-995 Sqft', price: '₹ 41.31-54.58 Lakhs*' },
   { type: '2 BHK', area: '980-985 Sqft', price: '₹ 54.92-55.18 Lakhs*' },
+<<<<<<< HEAD
   { type: '2 BHK', area: '1020-1095 Sqft', price: '₹ 56.97-60.80 Lakhs*' },
   { type: 'Office', area: '3100-1320 Sqft', price: '₹ 71.26-72.28 Lakhs*' },
   { type: 'Studio', area: '1050-1010 Sqft', price: '₹ 81.73-81.99 Lakhs*' }
+=======
+  { type: '3 BHK', area: '1020-1095 Sqft', price: '₹ 56.97-60.80 Lakhs*' },
+  // { type: 'Office', area: '3100-1320 Sqft', price: '₹ 71.26-72.28 Lakhs*' },
+  // { type: 'Studio', area: '1050-1010 Sqft', price: '₹ 81.73-81.99 Lakhs*' }
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 ];
 
 function PriceSection({ openPopup }) {
   const gridRef = useRef(null);
+<<<<<<< HEAD
+=======
+  const sectionRef = useScrollReveal('.reveal', 0.1);
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
   useEffect(() => {
     const cards = gridRef.current?.querySelectorAll('.fade-up');
@@ -33,8 +47,13 @@ function PriceSection({ openPopup }) {
   }, []);
 
   return (
+<<<<<<< HEAD
     <section className="price-section" id="pricing">
       <div className="heading-container">
+=======
+    <section className="price-section" id="pricing" ref={sectionRef}>
+      <div className="heading-container reveal">
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
         <div className="line"></div>
         <h2>Price</h2>
         <div className="line"></div>

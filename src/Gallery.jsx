@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 import towerImg from './assets/ABHINAV AVASTHI  VIEW 01.jpg.jpeg';
@@ -7,6 +8,18 @@ import poolImg from './assets/VRINDAVAN SWIMING POOL 1.jpg.jpeg';
 import mandirImg from './assets/VRINDAVAN MANDIR.jpg.jpeg';
 import gardenImg from './assets/VRINDAVAN GARDEN 01.jpg.jpeg';
 import image1 from './assets/VRANDAVAN DAY  VIEW A WING.jpg.jpeg';
+=======
+import { useState, useEffect, useRef } from 'react';
+import { useScrollReveal } from './useScrollReveal';
+
+import towerImg from './assets/ABHINAV-AVASTHI--VIEW-01.webp';
+import bedroomImg from './assets/BEDROOM.avif';
+import mroom from './assets/MROOM.jpg';
+import poolImg from './assets/VRINDAVAN-SWIMING-POOL-1.webp';
+import mandirImg from './assets/VRINDAVAN-MANDIR.webp';
+import gardenImg from './assets/VRINDAVAN-GARDEN-01.webp';
+import image1 from './assets/VRANDAVAN-DAY--VIEW-A-WING.webp';
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
 const galleryData = [
   {
@@ -73,6 +86,10 @@ function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+<<<<<<< HEAD
+=======
+  const ref = useScrollReveal('.reveal', 0.1);
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
 
   const visibleItems = galleryData.filter(
     (item) => activeFilter === 'all' || item.category === activeFilter
@@ -116,19 +133,33 @@ function Gallery() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="gallery-section" id="gallery">
       <div className="gallery-container">
         <div className="gallery-header">
+=======
+    <section className="gallery-section" id="gallery" ref={ref}>
+      <div className="gallery-container">
+        <div className="gallery-header reveal">
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           <div className="line"></div>
           <h2>Gallery</h2>
           <div className="line"></div>
         </div>
+<<<<<<< HEAD
         <p className="gallery-subtitle">
+=======
+        <p className="gallery-subtitle reveal" style={{ transitionDelay: '0.1s' }}>
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           Explore every corner of Trident Vrindavan through our curated gallery
         </p>
 
         {/* Tabs */}
+<<<<<<< HEAD
         <div className="gallery-tabs">
+=======
+        <div className="gallery-tabs reveal" style={{ transitionDelay: '0.2s' }}>
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
           {tabs.map((tab) => (
             <button
               key={tab.filter}
@@ -151,7 +182,18 @@ function Gallery() {
               style={getGridStyle(item, activeFilter)}
               onClick={() => openLightbox(index)}
             >
+<<<<<<< HEAD
               <img src={item.src} alt={item.alt} loading="lazy" />
+=======
+              <img
+                src={item.src}
+                alt={item.alt}
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"
+              />
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
               <div className="gallery-item-overlay">
                 <span>{item.label}</span>
               </div>
@@ -173,7 +215,16 @@ function Gallery() {
           &#10094;
         </button>
         {lightboxOpen && visibleItems[currentIndex] && (
+<<<<<<< HEAD
           <img src={visibleItems[currentIndex].src} alt="Gallery Image" id="lightboxImg" />
+=======
+          <img
+            src={visibleItems[currentIndex].src}
+            alt="Gallery Image"
+            id="lightboxImg"
+            decoding="async"
+          />
+>>>>>>> 1d1c97a3b7ad8d11d62945d560ffe33ae2f65ace
         )}
         <button className="lightbox-nav lightbox-next" id="lightboxNext" onClick={goNext}>
           &#10095;
