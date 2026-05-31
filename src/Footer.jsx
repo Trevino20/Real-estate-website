@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from './useScrollReveal';
+import logo from './assets/vrindavan-logo.png';
 
 function Footer() {
   const [collapsed, setCollapsed] = useState(true);
@@ -41,7 +42,7 @@ function Footer() {
         </div>
 
         <img
-          src="https://69dbb75eb9fe4e9da070d86a.imgix.net/vrindavan%20logo.png?w=1875&h=1250"
+          src={logo}
           alt="Trident Vrindavan Logo"
           className="footer-logo reveal"
           style={{ transitionDelay: '0.2s' }}
@@ -50,8 +51,8 @@ function Footer() {
         <div className="rera-text reveal" style={{ transitionDelay: '0.3s' }}>
           The project has been registered under the name <strong>Trident Vrindavan </strong> via MahaRERA
           registration number: <strong>PR1330002502221</strong>, is available on the website{' '}
-          <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer">
-            https://maharera.mahaonline.gov.in
+          <a href="https://maharera.maharashtra.gov.in/ " target="_blank" rel="noreferrer">
+            https://maharera.maharashtra.gov.in
           </a>.
         </div>
 

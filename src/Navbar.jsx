@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from './assets/vrindavan-logo.png';
 
 function Navbar({ openPopup }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -22,7 +23,7 @@ function Navbar({ openPopup }) {
     <header className={`navbar${mounted ? ' navbar-visible' : ''}`} id="navbar">
       <div className="logo">
         <img
-          src="https://69dbb75eb9fe4e9da070d86a.imgix.net/vrindavan%20logo.png?w=1875&h=1250"
+          src={logo}
           alt="Trident Vrindavan"
           className="logo-img"
         />

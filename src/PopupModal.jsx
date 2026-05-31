@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import logo from './assets/vrindavan-logo.png';
 
 // ── Paste your Google Apps Script Web App URL below ──────────────────────────
 const SHEET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwhi6UnVLmzVY7hqXa1z2ExlMgIXOMdXV2aOv5Jw1ED8qdZz3vQCy_MjBAu0E0Zjewz/exec";
@@ -93,7 +94,7 @@ function PopupModal({ isOpen, title, onClose }) {
 
           <div className="popup-header">
             <img
-              src="https://69dbb75eb9fe4e9da070d86a.imgix.net/vrindavan%20logo.png?w=1875&h=1250"
+              src={logo}
               alt="Trident Vrindavan Logo"
               className="popup-logo"
             />
@@ -111,7 +112,7 @@ function PopupModal({ isOpen, title, onClose }) {
 
             <div className="popup-form-group popup-phone-group">
               <select name="country_code" className="popup-input popup-country-select">
-                <option value="+91">India (+91)</option>
+                <option value="+91">(+91)</option>
                 <option value="+1">USA (+1)</option>
                 <option value="+44">UK (+44)</option>
                 <option value="+971">UAE (+971)</option>
